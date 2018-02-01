@@ -1,0 +1,121 @@
+//@require '../normalised'
+//@require '../global'
+@require '../common'
+
+body, html
+	background-color GRAY_F5
+	overflow hidden
+.page-title
+	width auto
+	height auto
+	position absolute
+	left 30px
+	top 105px
+	overflow hidden
+	.page-title-cn
+		font-size 26px
+		line-height 26px
+		color GRAY_33
+	.page-title-en
+		margin-top 4px
+		font-size 26px
+		line-height 26px
+		color HISENSE_BLUE
+	@media HEIGHT_LARGE
+		.page-title-cn
+			font-size 36px
+			line-height 36px
+		.page-title-en
+			margin-top 6px
+			font-size 36px
+			line-height 36px
+	@media HEIGHT_SMALL
+		.page-title-cn
+			font-size 22px
+			line-height 22px
+		.page-title-en
+			margin-top 2px
+			font-size 22px
+			line-height 22px
+	@media WIDTH_THIN
+		.page-title-cn
+			font-size 22px
+			line-height 22px
+		.page-title-en
+			margin-top 2px
+			font-size 22px
+			line-height 22px
+.hi-pager
+	list-style none
+	display block
+	right 10px
+	position absolute
+	width 10px
+	height auto
+	top 300px
+	z-index 300
+	li
+		position relative
+		display block
+		width 10px
+		height 20px
+		border-radius 10px
+		background-image url('images/hi-bg-black-pct40.png')
+		background-repeat repeat
+		margin 4px 0px
+	.hi-pager-selector
+		display block
+		position absolute
+		width 6px
+		height 16px
+		border-radius 6px
+		top 6px
+		left 2px
+		background-image url('images/hi-bg-white-pct80.png')
+		background-repeat repeat
+		z-index 1
+.hi-container
+	display block
+	position absolute
+	width 100%
+	top 0px
+	left 0px
+	right 0px
+	height 9999px
+	min-height 500px
+	overflow hidden
+	.hi-item
+		position relative
+		width 100%
+		height auto
+		display block
+		overflow hidden
+		background-color #ff00ff
+		&.page-1
+			background-color BLUE_GRAY
+		&.page-2
+			background-color BLUE_GRAY
+			.page-title-cn
+				color #ffffff
+			.page-title-en
+				color lighten(HISENSE_BLUE,20%)
+		&.page-3
+			background-color GRAY_E3
+			background-image url('images/hi-bg-page3.png')
+			background-repeat repeat
+		&.page-4
+			background-color GRAY_E3
+			height auto
+		&.page-5
+			background-color #ffffff
+			height 300px
+
+
+
+
+@require '../../components/wx_pic/index'
+@require '../../components/nav/index'
+@require '../../components/page-1/index'
+@require '../../components/page-2/index'
+@require '../../components/page-3/index'
+@require '../../components/page-4/index'

@@ -1,0 +1,200 @@
+TOP_HEIGHT = 40px
+NAV_HEIGHT = 75px
+TOP_TEXT_DISTANCE = 10px
+PADDING_SPACE = 165px
+
+TOP_ZINDEX = 1000
+NAV_ZINDEX = 999
+
+.hi-top
+	position fixed
+	z-index TOP_ZINDEX
+	height TOP_HEIGHT
+	width 100%
+	padding 0px PADDING_SPACE
+	background-color BLUE_GRAY
+	top 0px
+	left 0px
+	line-height TOP_HEIGHT
+	font-size 14px
+	color lighten(BLUE_GRAY,90%)
+	box-sizing border-box
+	span
+		float left
+		display block
+		margin-right TOP_TEXT_DISTANCE*2
+		a
+			text-decoration none
+			color lighten(BLUE_GRAY,90%)
+			transition(color,0.2,ease-in-out)
+			&:hover
+				color #ffffff
+	.dv-line
+		float left
+		display block
+		width 1px
+		height 12px
+		margin-top 14px
+		margin-right TOP_TEXT_DISTANCE*2
+		background-color lighten(BLUE_GRAY,50%)
+	.top-tip
+		display block
+		overflow visible
+		float left
+		position relative
+		padding 0px 6px
+		width auto
+		height 22px
+		line-height 22px
+		font-size 12px
+		color #ffffff
+		margin 9px 0px 0px -5px
+		background-color ORANGE_PINK
+		span
+			padding 0
+			margin 0
+		&-arrow
+			position absolute
+			border-arrow(ORANGE_PINK,6px,left)
+			left -6px
+			top 50%
+			margin-top -6px
+	.top-icon
+		width 30px
+		height 30px
+		display block
+		float left
+		margin-left TOP_TEXT_DISTANCE
+		background-image url('images/hi-topicons.png')
+		background-repeat no-repeat
+		margin-top 5px
+		&.has-text
+			width auto
+			padding-left 30px
+			.top-icon-text
+				display none
+				width auto
+				height 30px
+				line-height 30px
+				padding-left 6px
+				font-size 15px
+				font-style italic
+				font-weight bold
+				overflow hidden
+				color lighten(HISENSE_BLUE,40%)
+		&.has-qrcode
+			position relative
+			.qrcode-arrow
+				position absolute
+				display none
+				border-arrow(lighten(HISENSE_BLUE,20%),6px,top)
+				left 50%
+				margin-left -6px
+				top 28px
+			.qrcode-box
+				width 0px
+				height 0px
+				padding 0px
+				overflow hidden
+				top 34px
+				right 0px
+				position absolute
+				background-color lighten(HISENSE_BLUE,20%)
+				transition(all,0.1s,ease-in-out)
+				img
+					width 100%
+					height 100%
+					display block
+					float left
+			&:hover
+				.qrcode-arrow
+					display block
+				.qrcode-box
+					width 128px
+					height 128px
+					padding 10px
+		&.ticon-1
+			background-position 0px 0px
+		&.ticon-2
+			background-position 0px -50px
+		&.ticon-3
+			background-position 0px -100px
+		&.ticon-4
+			background-position 0px -150px
+	.ticon-1:hover
+		background-position -400px 0px
+	.ticon-2:hover
+		background-position -400px -50px
+	.ticon-3:hover
+		background-position -400px -100px
+	.ticon-4:hover
+		background-position -400px -150px
+.hi-nav
+	width 100%
+	height NAV_HEIGHT
+	top TOP_HEIGHT
+	left 0px
+	padding-left PADDING_SPACE
+	position fixed
+	z-index NAV_ZINDEX
+	background-color rgba(255,255,255,1)
+	transition(background-color,1s,ease-in-out)
+	box-sizing border-box
+	&.hi-nav-transparent
+		background-color rgba(255,255,255,0.9)
+	.row-container
+		position relative
+	.hi-logo
+		display block
+		float left
+		width 172px
+		height 75px
+		background-image url('images/logo.png')
+		background-repeat no-repeat
+		background-position left center
+	.hi-nav-btn-container
+		position absolute
+		right 0%
+		margin-right 124px
+		top 0px
+		.hi-nav-btn
+			width 155px
+			display block
+			text-decoration none
+			height 75px
+			line-height 75px
+			color #202020
+			font-size 17px
+			float left
+			cursor pointer
+			text-align center
+			transition(all,0.1s,ease-in-out)
+			background-color transparent
+			&:hover
+				background-color GRAY_F5
+			&.active
+				background-color NAV_BLUE_TOP
+				cursor default
+				background-image url('images/hi-navbg-focus.png')
+				background-repeat repeat
+				//background-gradient(top,NAV_BLUE_TOP,NAV_BLUE_BOTTOM)
+				&:hover
+					text-decoration none
+	.hi-tiyan-btn
+		width 128px
+		height 50px
+		position absolute
+		right -500px
+		margin-top 12.5px
+		overflow hidden
+		line-height 50px
+		text-align center
+		font-size 17px
+		color #ffffff
+		display block
+		background-color HISENSE_BLUE
+		border-radius 4px
+		text-decoration none
+		transition(background-color,0.2s,ease-in-out)
+		&:hover
+			background-color lighten(HISENSE_BLUE,10%)

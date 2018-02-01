@@ -1,0 +1,46 @@
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		meta(name='renderer' content='webkit')
+		meta(name='description', content='hisense')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+		title Hisense
+		link(rel='stylesheet', href='index.css')
+		script(type='text/javascript').
+			function browserRedirect() { 
+				var sUserAgent= navigator.userAgent.toLowerCase(); 
+				var bIsIpad= sUserAgent.match(/ipad/i) == "ipad"; 
+				var bIsIphoneOs= sUserAgent.match(/iphone os/i) == "iphone os"; 
+				var bIsMidp= sUserAgent.match(/midp/i) == "midp"; 
+				var bIsUc7= sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4"; 
+				var bIsUc= sUserAgent.match(/ucweb/i) == "ucweb"; 
+				var bIsAndroid= sUserAgent.match(/android/i) == "android"; 
+				var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce"; 
+				var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile"; 
+				if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) { 
+					window.location.href= 'index_m.html'; 
+				}
+			} 
+			browserRedirect();
+	body
+		include ../../components/wx_pic/index
+		include ../../components/nav/index
+		.hi-container
+			.hi-item.page-1.full-height
+				include ../../components/page-1/index
+			.hi-item.page-2.full-height
+				include ../../components/page-2/index
+			.hi-item.page-3.full-height
+				include ../../components/page-3/index
+			.hi-item.page-4
+				include ../../components/page-4/index
+			.clearfix
+		.hi-pager
+			.hi-pager-selector
+		
+		script(src='js/jquery-1.11.2.min.js')
+		script(src='js/jquery.mousewheel.min.js')
+		script(src='js/jquery.easing.min.js')
+		script(src='js/jquery.color-2.1.2.min.js')
+		script(src='js/app.js')

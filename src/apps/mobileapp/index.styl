@@ -1,0 +1,35 @@
+@require '../normalised'
+@require '../global'
+@require '../common'
+
+MOBILE_320p = '(max-height:320px)'
+MOBILE_480P = '(min-height:320px) and (max-height:480px)'
+MOBILE_800P = '(min-height:480px) and (max-height:800px)'
+MOBILE_1280P = '(min-height:800px) and (max-height:1280px)'
+MOBILE_1920P = '(min-height:1280px)'
+body, html
+	background-color #ffffff
+.page-title
+	width 100%
+	height auto
+	overflow hidden
+	margin 20px 0px
+	.page-title-cn
+		text-align center
+		font-size 26px
+		line-height 26px
+		color GRAY_33
+	.page-title-en
+		text-align center
+		margin-top 4px
+		font-size 26px
+		line-height 26px
+		color HISENSE_BLUE
+
+@require '../../components/wx_pic/index'
+@require '../../components/m-topbar/index'
+@require '../../components/m-slider/index'
+@require '../../components/m-part-1/index'
+@require '../../components/m-part-2/index'
+@require '../../components/m-part-3/index'
+@require '../../components/m-footer/index'

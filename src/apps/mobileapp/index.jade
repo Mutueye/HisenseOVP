@@ -1,0 +1,26 @@
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		meta(name='description', content='hisense')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+		title Hisense
+		link(rel='stylesheet', href='owl-carousel/owl.carousel.css')
+		link(rel='stylesheet', href='owl-carousel/owl.theme.css')
+		link(rel='stylesheet', href='index.css')
+	body
+		include ../../components/m-topbar/index
+		include ../../components/m-slider/index
+		.full-img
+			img(src='images/mtitle.jpg')
+		.clearfix
+		include ../../components/m-part-1/index
+		include ../../components/m-part-2/index
+		include ../../components/m-part-3/index
+		.full-img
+			img(src='images/m-footer.png')
+		
+		script(src='js/jquery-1.11.2.min.js')
+		script(src='js/jquery.scrollTo.min.js')
+		script(src='owl-carousel/owl.carousel.js')
+		script(src='js/app.js')
